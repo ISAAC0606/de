@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Me amas?</title>
+    <style>
+        .body {
+            background-color: rgb(196, 158, 245);
+            text-align: center;
+
+        }
+
+        .bodytitle{
+            color:red;
+        }
+
+.body.img {
+    width: 100%;
+    border-radius: 50%;
+}
+    </style>
+</head>
+<body class="body">
+    <h1 class="body__title">¿Me amas?</h1>
+    <img src="https://tse1.mm.bing.net/th?&id=OVP.PMxaIJ6VbA7LAGmUOaKSKgHgFo&w=298&h=180&c=7&pid=2.1&rs=1" 
+    alt="Foto mqueen">
+    <button id="yes">SI</button>
+    <button id="no">NO</button>
+
+    <script>
+        const buttonSI = document.getElementById("yes");
+        const buttonNO = document.getElementById("no");
+
+        const respuestasi = () => {
+            alert("Te amo más preciosa");
+            location.href = "https://www.youtube.com/watch?v=zf2VYAtqRe033s" ;
+        };
+
+        const evitarboton = () => {
+            buttonNO.style.position = 'absolute';
+            buttonNO.style.top = (Math.random()* window.innerHeight) + 'px' ;
+            buttonNO.style.left = (Math.random()* window.innerWidth) + 'px' ;
+        };
+
+        buttonSI.addEventListener('click', respuestasi);
+        buttonNO.addEventListener('mouseover', evitarboton);
+    </script>
+</body>
+</html>
